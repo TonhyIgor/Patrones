@@ -1,4 +1,4 @@
-package tp6.adapter.ejercicio1;
+package tp6.observer.ejercicio1;
 
 public class ConsoleObserver implements Observer {
     private Medidor medidor;

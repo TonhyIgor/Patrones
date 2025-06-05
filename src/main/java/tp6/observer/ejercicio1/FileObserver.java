@@ -1,4 +1,4 @@
-package tp6.adapter.ejercicio1;
+package tp6.observer.ejercicio1;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
