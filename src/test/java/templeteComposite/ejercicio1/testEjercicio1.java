@@ -1,7 +1,9 @@
 package templeteComposite.ejercicio1;
 
 import org.junit.jupiter.api.Test;
-import templateComposite.ejercicio1.*;
+import tp4.composite.ejercicio1.Empleado;
+import tp4.composite.ejercicio1.EmpleadosConCargo;
+import tp4.composite.ejercicio1.Regular;
 
 import java.util.List;
 
@@ -16,18 +18,18 @@ public class testEjercicio1 {
         List<Empleado> listaRegular1 = List.of(regular1, regular2);
         List<Empleado> listaRegular2 = List.of(regular3);
 
-        var liderProyecto1 = new LiderDeProyecto(2000, listaRegular1);
-        var liderProyecto2 = new LiderDeProyecto(2000, listaRegular2);
+        var liderProyecto1 = new EmpleadosConCargo(2000, listaRegular1);
+        var liderProyecto2 = new EmpleadosConCargo(2000, listaRegular2);
         List<Empleado> listaLiderProyecto = List.of(liderProyecto1, liderProyecto2);
 
-        var mandoMedio1 = new MandoMedio(3000, listaLiderProyecto);
+        var mandoMedio1 = new EmpleadosConCargo(3000, listaLiderProyecto);
         List<Empleado> listaMandoMedio = List.of(mandoMedio1);
 
-        var gerente1 = new Gerente(4000, listaMandoMedio);
-        var gerente2 = new Gerente(4000, List.of());
+        var gerente1 = new EmpleadosConCargo(4000, listaMandoMedio);
+        var gerente2 = new EmpleadosConCargo(4000, List.of());
         List<Empleado> listaGerente = List.of(gerente1, gerente2);
 
-        var director = new Director(5000, listaGerente);
+        var director = new EmpleadosConCargo(5000, listaGerente);
 
         assertEquals(23000, director.calcularSalarioTotal());
     }
